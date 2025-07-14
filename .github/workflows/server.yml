@@ -20,9 +20,9 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Run Lint
-        run: ./node_modules/.bin/eslint .
+        run: npx eslint .
       - name: Run Tests
         run: npm test
 
