@@ -2,8 +2,8 @@ name: Backend CI/CD
 
 on:
   push:
-    paths:
-      - 'server/**'
+    #paths:
+      #- 'server/**'
   pull_request:
 
 jobs:
@@ -28,10 +28,10 @@ jobs:
 
       - name: Login to DockerHub
         shell: bash
-        run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+        run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ci-cd-server ./server
+        run: docker build -t ${{ secrets.DOCKERHUB_USER }}/ci-cd-server ./server
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ci-cd-server
+        run: docker push ${{ secrets.DOCKERHUB_USER }}/ci-cd-server
