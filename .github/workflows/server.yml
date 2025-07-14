@@ -2,8 +2,8 @@ name: Backend CI/CD
 
 on:
   push:
-    #paths:
-      #- 'server/**'
+    paths:
+      - 'server/**'
   pull_request:
 
 jobs:
