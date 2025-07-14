@@ -1,0 +1,27 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    paths:
+      - 'client/**'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: client
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Run Lint
+        run: npx eslint .
+      - name: Build Project
+        run: npm run build
