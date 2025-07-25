@@ -21,6 +21,9 @@ A modern full-stack application built with **React (frontend)** and **Node.js (b
 - **Containerization:** Docker + DockerHub
 - **Deployment:** Render.com
 
+![Backend CI](https://github.com/ikerilive/ci-cd-fullstack-app/actions/workflows/server.yml/badge.svg)
+![Frontend CI](https://github.com/ikerilive/ci-cd-fullstack-app/actions/workflows/client.yml/badge.svg)
+
 ---
 
 ## 📐 Architecture Overview
@@ -38,5 +41,4 @@ A modern full-stack application built with **React (frontend)** and **Node.js (b
               Auto-Deploy to Render (via Webhooks or Pull)
 
 
-![Backend CI](https://github.com/ikerilive/ci-cd-fullstack-app/actions/workflows/server.yml/badge.svg)
-![Frontend CI](https://github.com/ikerilive/ci-cd-fullstack-app/actions/workflows/client.yml/badge.svg)
+
